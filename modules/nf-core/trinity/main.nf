@@ -5,7 +5,7 @@ process TRINITY {
 
     conda "${moduleDir}/environment.yml"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/trinity:2.15.1--pl5321h146fbdb_3':
+        'https://data.broadinstitute.org/Trinity/TRINITY_SINGULARITY/trinityrnaseq.v2.15.2.simg':
         'biocontainers/trinity:2.15.1--pl5321h146fbdb_3' }"
 
     input:
